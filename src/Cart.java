@@ -16,6 +16,31 @@ public class Cart {
         return quantityOrdered;
     }
 
+    public void searchByID(int id) {
+        boolean is_found = false;
+        for (DigitalVideoDisc d : getList()) {
+            if (d.getID() == id) {
+                System.out.println(d.toString());
+                is_found = true;
+            }
+        }
+        if (!is_found)
+            System.out.println("Can't find DVD");
+    }
+
+    public void searchByTitle(String title) {
+        boolean is_found = false;
+        for (DigitalVideoDisc d : getList()) {
+            if (d.getTitle().equals(title)) {
+                System.out.println(d.toString());
+                is_found = true;
+
+            }
+        }
+        if (!is_found)
+            System.out.println("Can't find DVD");
+    }
+
     public void printList() {
         System.out.println("****************CART****************");
         System.out.println("Ordered Items:");
