@@ -1,39 +1,42 @@
 import java.time.LocalDate;
 
 public class DigitalVideoDisc {
-
+    private static int nbDigitalVideoDisc;
+    private int ID;
     private String title;
     private String category;
     private String director;
     private int length;
     private double price;
 
-    public DigitalVideoDisc(String title) {
-        this.title = title;
-    }
-
-    // Constructor for category, title, and price
-    public DigitalVideoDisc(String title, String category, float price) {
-        this.title = title;
-        this.category = category;
-        this.price = price;
-    }
-
-    // Constructor for director, category, title, and price
-    public DigitalVideoDisc(String title, String category, String director, float price) {
-        this.title = title;
-        this.category = category;
-        this.director = director;
-        this.price = price;
-    }
-
     // Constructor for all attributes
     public DigitalVideoDisc(String title, String category, String director, int length, float price) {
+        DigitalVideoDisc.setNbDigitalVideoDisc(nbDigitalVideoDisc + 1);
+        this.ID = DigitalVideoDisc.getNbDigitalVideoDisc();
         this.title = title;
         this.category = category;
         this.director = director;
         this.length = length;
         this.price = price;
+
+    }
+
+    public static int getNbDigitalVideoDisc() {
+        return nbDigitalVideoDisc;
+    }
+
+    // Setter method for nbDigitalVideoDisc
+    public static void setNbDigitalVideoDisc(int nbDigitalVideoDisc) {
+        DigitalVideoDisc.nbDigitalVideoDisc = nbDigitalVideoDisc; // Use the class name to set the static variable
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    // Setter method for ID
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getTitle() {
