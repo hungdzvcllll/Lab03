@@ -16,6 +16,16 @@ public class Cart {
         return quantityOrdered;
     }
 
+    public void printList() {
+        System.out.println("****************CART****************");
+        System.out.println("Ordered Items:");
+        for (DigitalVideoDisc d : getList()) {
+            System.out.println(d.toString());
+        }
+        System.out.println(totalCost());
+        System.out.println("*************************************");
+    }
+
     public void addDigitalVideoDisc(DigitalVideoDisc d) {
         if (list.size() < getQuntityOrdered()) {
             list.add(d);

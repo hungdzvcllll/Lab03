@@ -9,6 +9,11 @@ public class DigitalVideoDisc {
     private int length;
     private double price;
 
+    public String toString() {
+        return getID() + " " + getTitle() + " " + getCategory() + " " + getDirector() + " " + getLength() + " "
+                + String.format("%.2f", getPrice());
+    }
+
     // Constructor for all attributes
     public DigitalVideoDisc(String title, String category, String director, int length, float price) {
         DigitalVideoDisc.setNbDigitalVideoDisc(nbDigitalVideoDisc + 1);

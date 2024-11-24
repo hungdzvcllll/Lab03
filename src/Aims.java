@@ -15,8 +15,6 @@ public class Aims {
         // c.addDigitalVideoDisc(d3);
         c.addDigitalVideoDisc(d2, d3);
 
-        System.out.println(c.totalCost());
-        c.removeDigitalVideoDisc(d2);
-        System.out.println(c.totalCost());
+        c.printList();
     }
 }
