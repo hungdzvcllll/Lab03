@@ -10,7 +10,8 @@ public class Aims {
         // c.addDigitalVideoDisc(d2);
         // c.addDigitalVideoDisc(d3);
         c.addDigitalVideoDisc(d2, d3);
-        c.searchByID(3);
-        c.searchByTitle("shdggdg");
+        System.out.println(c.totalCost());
+        c.removeDigitalVideoDisc(d2);
+        System.out.println(c.totalCost());
     }
 }
