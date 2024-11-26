@@ -1,0 +1,11 @@
+2.Nên sử dụng tham số đầu vào là mảng thay vì varargs,vì khi đó số lượng tham số có thể lớn và gây khó quản lý code. 
+
+3. 
+
+-java là ngôn ngữ truyền tham trị:khi truyền tham số vào phương tức,phương tức chỉ đơn giản copy giá trị của tham số và  thựchiện các phép biêns đổi trên giá trị này mà ko ảnh hưởng đếngiá trị của tham số được đưa vào. 
+
+-với phương thức swap,giá trị của 2 tham chiếu được đưa vào là đối tượng mà tham chiếu  tham chiếu tới,phương thức ko làm thay đổi giá trị(tức đối tuợng tham chiếu của 2 tham số),đông thời không làm thay đổi thuộc tính của đối tượng nên khi gọi phương thức getTitle(),giá trị ko thay đổi 
+
+-với phương thức changeTittle,phương thức copy giá trị của tham số đưa vào(là đốii tượng mà jungleDVD đang tham chiếu tới),đồng thời có thể dùng các phương thức của jungleDVD để làm thay đổi thuộc tính của đối tượng(mà ko làm thay đổi đối tượng tham chiếu tới) nên title có thể thay đổi 
+
+6.phương thức toString() có kiểu trả về là string 
