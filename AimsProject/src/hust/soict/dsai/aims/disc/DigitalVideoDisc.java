@@ -16,6 +16,10 @@ public class DigitalVideoDisc {
                 + String.format("%.2f", getPrice());
     }
 
+    public DigitalVideoDisc(String title) {
+        this.title = title;
+    }
+
     // Constructor for all attributes
     public DigitalVideoDisc(String title, String category, String director, int length, float price) {
         DigitalVideoDisc.setNbDigitalVideoDisc(nbDigitalVideoDisc + 1);
